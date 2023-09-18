@@ -55,7 +55,7 @@
           </a>
         </td>
         <td class="px-4 py-3">
-          <a href="" target="_blank">
+          <a href="{% url 'profile' link.profile.slug %}" target="_blank">
             {{link.profile.name}}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -74,10 +74,10 @@
           </a>
         </td>
         <td class="px-4 py-3 underline text-blue-600">
-          <a href="">Edit</a>
+          <a href="{% url 'link_update' link.id %}">Edit</a>
         </td>
         <td class="px-4 py-3 underline text-red-600">
-          <a href="">Delete</a>
+          <a href="{% url 'link_delete' link.id %}">Delete</a>
         </td>
       </tr>
       {% endfor %}
